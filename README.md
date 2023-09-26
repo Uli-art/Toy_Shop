@@ -58,6 +58,7 @@ Progect for subject "Data Models and Database Management Systems"
    - id (int, not null, pk, autoincrement)
    - name (string. not null)
    - surname  (string. not null)
+   - password (strint, not null)
    - manager_info_id  (int. not null) -> `Manager_info`
 9. `Manager_info`
     - id (int, not null, pk, autoincrement)
