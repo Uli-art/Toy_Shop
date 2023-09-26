@@ -19,12 +19,9 @@ Progect for subject "Data Models and Database Management Systems"
    - name (string, unique, not null)
    - email (string, not null)
    - password (string, not null, unique)
-2. `Customer`
+2. `Status`
    - id (int, not null, pk, autoincrement)
-   - name (string, not null, unique)
-   - phone_number (string, not null)
-   - city (string, not null)
-   - address (string, not null)
+   - status (string, not null)
 3. `Product`
     - id (int, not null, pk, autoincrement)
     - name (string, not null, unique)
@@ -37,7 +34,7 @@ Progect for subject "Data Models and Database Management Systems"
 5.  `Order`
     - id (int, not null, pk, autoincrement)
     - date (date, not null)
-    - customer_id (int, not null, fk) -> `Customer`
+    - user_id (int, not null, fk) -> `User`
     - manager_id (int, not null, fk) -> `Manager`
     - product_id (int, not null, fk) -> `Product`
     - quantity (int, not null)
@@ -54,7 +51,7 @@ Progect for subject "Data Models and Database Management Systems"
     - short_description  (string, not null)
     - main_text  (string, not null)
     - image  (string, not null)
-    - user_id (int, fk, not null)
+    - user_id (int, fk, not null) -> `User`
 8. `Manager`
    - id (int, not null, pk, autoincrement)
    - name (string. not null)
@@ -68,10 +65,14 @@ Progect for subject "Data Models and Database Management Systems"
     - position_id (int. not null) -> `Position`
     - is_admin (bool, not null)
     - resume (string. not null)
-
 10. `Position`
     - id (int, not null, pk, autoincrement)
     - position (string. not null)
+11. `Log`
+    - id (int, not null, pk, autoincrement)
+    - activity (string, not null)
+    - date (date, not null)
+    - user_id (int, fk, not null) -> `User`
 
 ## Scheme:
 ![Diagram](https://github.com/Uli-art/Toy_Shop/assets/78424200/c27164c2-9b92-488f-9e01-119b55ad3d26)
