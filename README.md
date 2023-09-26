@@ -39,6 +39,7 @@ Progect for subject "Data Models and Database Management Systems"
     - product_id (int, not null, fk) -> `Product`
     - quantity (int, not null)
     - completion_date (date)
+    - status_id - `Status`
 6.  `Review`
     - id (int, not null, pk, autoincrement)
     - user_id (int, not null, fk) -> `User`
