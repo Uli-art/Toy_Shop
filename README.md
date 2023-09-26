@@ -9,7 +9,6 @@ Progect for subject "Data Models and Database Management Systems"
 * Logging of user actions
 * Product management (CRUD)
 * Order management (CRUD)
-* Customer management (CRUD)
 * Article management (CRUD)
 * Search, sort and filter
 * Write a comment
