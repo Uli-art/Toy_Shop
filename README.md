@@ -76,4 +76,5 @@ Progect for subject "Data Models and Database Management Systems"
     - user_id (int, fk, not null) -> `User`
 
 ## Scheme:
-![Diagram](https://github.com/Uli-art/Toy_Shop/assets/78424200/c27164c2-9b92-488f-9e01-119b55ad3d26)
+![DIagr](https://github.com/Uli-art/Toy_Shop/assets/78424200/b16a82b3-93c3-471b-acf6-53299d3a08cf)
+
