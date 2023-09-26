@@ -54,6 +54,7 @@ Progect for subject "Data Models and Database Management Systems"
     - short_description  (string, not null)
     - main_text  (string, not null)
     - image  (string, not null)
+    - user_id (int, fk, not null)
 8. `Manager`
    - id (int, not null, pk, autoincrement)
    - name (string. not null)
