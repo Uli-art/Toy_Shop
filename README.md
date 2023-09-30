@@ -5,13 +5,13 @@ Progect for subject "Data Models and Database Management Systems"
 ## Functionality:
 * User authorization
 * User management (CRUD)
-* Role system
+* Role system (user, manager, admin)
 * Logging of user actions
-* Product management (CRUD)
-* Order management (CRUD)
-* Article management (CRUD)
-* Search, sort and filter
-* Write a comment
+* Product management (CRUD) -> User, Manager(Read); Admin(create, update, delete)
+* Order management (CRUD) -> Manager(only their), Admin
+* Article management (CRUD) -> User(CRUD: their; read: all), Admin(CRUD: all)
+* Filter -> User (filter product by type), Manager(+ filter their orders); Admin(+ filter all orders)
+* Write a comment -> User, Manager, Admin
 ## Entities:
 1. `User`
    - id (int, not null, pk, autoincrement)
