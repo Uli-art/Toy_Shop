@@ -15,21 +15,21 @@ Progect for subject "Data Models and Database Management Systems"
 ## Entities:
 1. `User`
    - id (int, not null, pk, autoincrement)
-   - name (string, unique, not null)
-   - email (string, not null)
-   - password (string, not null, unique)
+   - name (varchar, unique, not null)
+   - email (varchar, not null)
+   - password (varchar, not null, unique)
 2. `Status`
    - id (int, not null, pk, autoincrement)
-   - status (string, not null)
+   - status (varchar, not null)
 3. `Product`
     - id (int, not null, pk, autoincrement)
-    - name (string, not null, unique)
+    - name (varchar, not null, unique)
     - type_id (int, not null, fk) -> `Product_type`
     - price (double, not null)
     - in_production (bool, not null)
 4.  `Product_type`
     - id (int, not null, pk, autoincrement)
-    - name (string, not null, unique)
+    - name (varchar, not null, unique)
 5.  `Order`
     - id (int, not null, pk, autoincrement)
     - date (date, not null)
@@ -42,38 +42,40 @@ Progect for subject "Data Models and Database Management Systems"
 6.  `Review`
     - id (int, not null, pk, autoincrement)
     - user_id (int, not null, fk) -> `User`
+    - product_id (int, fk, not null) -> `Product`
     - rating (int, not null)
-    - text (string)
+    - text (varchar)
     - date (date, not null)
 7. `Article`
     - id (int, not null, pk, autoincrement)
-    - title (string, not null)
-    - short_description  (string, not null)
-    - main_text  (string, not null)
-    - image  (string, not null)
+    - title (varchar, not null)
+    - short_description  (varchar, not null)
+    - main_text  (varchar, not null)
+    - image  (varchar, not null)
     - user_id (int, fk) -> `User`
 8. `Manager`
    - id (int, not null, pk, autoincrement)
-   - name (string. not null)
-   - surname  (string. not null)
-   - password (strint, not null)
+   - email (varchar. not null, unique)
+   - password (strint, not null, unique)
    - manager_info_id  (int. not null) -> `Manager_info`
 9. `Manager_info`
     - id (int, not null, pk, autoincrement)
-    - email (string. not null)
-    - phone_number (string. not null)
+    - name (varchar. not null)
+    - surname  (varchar. not null)
+    - phone_number (varchar. not null)
     - position_id (int. not null) -> `Position`
     - is_admin (bool, not null)
-    - resume (string. not null)
+    - resume (varchar. not null)
 10. `Position`
     - id (int, not null, pk, autoincrement)
-    - position (string. not null)
+    - position (varchar. not null)
 11. `Log`
     - id (int, not null, pk, autoincrement)
-    - activity (string, not null)
+    - activity (varchar, not null)
     - date (date, not null)
     - user_id (int, fk, not null) -> `User`
 
+
 ## Scheme:
-![DIagr](https://github.com/Uli-art/Toy_Shop/assets/78424200/b16a82b3-93c3-471b-acf6-53299d3a08cf)
+![Diagram](https://github.com/Uli-art/Toy_Shop/assets/78424200/b631a8af-8242-4b4e-85d5-8c5ce359e59d)
 
