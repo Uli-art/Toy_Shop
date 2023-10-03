@@ -10,7 +10,7 @@ Progect for subject "Data Models and Database Management Systems"
 * Product management (CRUD) -> User, Manager(Read); Admin(create, update, delete)
 * Order management (CRUD) -> Manager(only their), Admin
 * Article management (CRUD) -> User(CRUD: their; read: all), Admin(CRUD: all)
-* Filter -> User (filter product by type), Manager(+ filter their orders); Admin(+ filter all orders)
+* Filter -> (unregistered/registered) User: filter product by type; Manager : + filter their orders; Admin: + filter all orders
 * Write a comment -> User, Manager, Admin
 ## Entities:
 1. `User`
